@@ -66,24 +66,21 @@ Public Class PdfGenerator
         End Using
     End Sub
 
-    Shared Function GenerarPdfStimulsoft() As StiReport
+    Shared Sub GenerarPdfStimulsoft()
         Dim report As New StiReport()
         Dim rutaMrt As String = "reportes/reporteStimulsoft.mrt"
         report.Load(rutaMrt)
 
         ' --- 1. REEMPLAZO DE VARIABLES (CAMPOS SUELTOS) ---
-        ' Esto llena los campos entre llaves como {InvoiceNo}, {CompanyName}, etc.
-        report.Dictionary.Variables("InvoiceNo").Value = "FAC-0001"
-        report.Dictionary.Variables("CompanyName").Value = "Mi Empresa S.A."
-        report.Dictionary.Variables("CompanyAddress").Value = "Barrio El Centro"
+        report.Dictionary.Variables("InvoiceNo").Value = "FAC-NUMERO1"
+        report.Dictionary.Variables("CompanyName").Value = "Farmacias del Ahorro"
+        report.Dictionary.Variables("CompanyAddress").Value = "Centro Drofasa"
         report.Dictionary.Variables("CompanyCity").Value = "Tegucigalpa"
 
         ' Datos del cliente
-        report.Dictionary.Variables("BillToCompanyName").Value = "Cliente de Prueba"
-        report.Dictionary.Variables("BillToAdress").Value = "Col. Miraflores"
+        report.Dictionary.Variables("BillToCompanyName").Value = "Milton Barrientos"
+        report.Dictionary.Variables("BillToAdress").Value = "Lomas del Guijarro"
 
-        ' --- 2. LLENADO DE LA TABLA (DATABAND) ---
-        ' Creamos la tabla con el nombre EXACTO que pusiste en el Designer: "Products"
         Dim dt As New DataTable("Products")
         dt.Columns.Add("ProductName", GetType(String))
         dt.Columns.Add("UnitsInStock", GetType(Decimal))
@@ -106,8 +103,6 @@ Public Class PdfGenerator
         report.ExportDocument(StiExportFormat.Pdf, rutaPdf)
 
         Process.Start(rutaPdf)
-
-        Return report
-    End Function
+    End Sub
 
 End Class
