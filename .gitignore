@@ -1,0 +1,29 @@
+## [ Archivos de Compilación ]
+[Bb]in/
+[Oo]bj/
+[Rr]elease/
+[Dd]ebug/
+
+## [ Visual Studio ]
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.vs*
+
+## [ Reportes y Temporales ]
+*.tmp
+*.log
+*.bak
+
+## [ NuGet ]
+packages/
+*.nuget.props
+*.nuget.targets
+
+## [ Otros ]
+*.suo
+*.user
+*.pdb
+*.cache
+*.db
