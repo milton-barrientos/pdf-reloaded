@@ -22,30 +22,43 @@ Partial Class MainForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.cmdGenerar = New System.Windows.Forms.Button()
+        Me.cmdGenerarFastReport = New System.Windows.Forms.Button()
+        Me.cmdGenerarStimulsoft = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'cmdGenerar
+        'cmdGenerarFastReport
         '
-        Me.cmdGenerar.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.cmdGenerar.Location = New System.Drawing.Point(12, 12)
-        Me.cmdGenerar.Name = "cmdGenerar"
-        Me.cmdGenerar.Size = New System.Drawing.Size(210, 56)
-        Me.cmdGenerar.TabIndex = 0
-        Me.cmdGenerar.Text = "Generar"
-        Me.cmdGenerar.UseVisualStyleBackColor = True
+        Me.cmdGenerarFastReport.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.cmdGenerarFastReport.Location = New System.Drawing.Point(12, 12)
+        Me.cmdGenerarFastReport.Name = "cmdGenerarFastReport"
+        Me.cmdGenerarFastReport.Size = New System.Drawing.Size(210, 56)
+        Me.cmdGenerarFastReport.TabIndex = 0
+        Me.cmdGenerarFastReport.Text = "Generar (FastReport)"
+        Me.cmdGenerarFastReport.UseVisualStyleBackColor = True
         '
-        'Form1
+        'cmdGenerarStimulsoft
+        '
+        Me.cmdGenerarStimulsoft.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.cmdGenerarStimulsoft.Location = New System.Drawing.Point(12, 74)
+        Me.cmdGenerarStimulsoft.Name = "cmdGenerarStimulsoft"
+        Me.cmdGenerarStimulsoft.Size = New System.Drawing.Size(210, 56)
+        Me.cmdGenerarStimulsoft.TabIndex = 1
+        Me.cmdGenerarStimulsoft.Text = "Generar (Stimulsoft)"
+        Me.cmdGenerarStimulsoft.UseVisualStyleBackColor = True
+        '
+        'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(234, 80)
-        Me.Controls.Add(Me.cmdGenerar)
-        Me.Name = "Form1"
+        Me.ClientSize = New System.Drawing.Size(234, 141)
+        Me.Controls.Add(Me.cmdGenerarStimulsoft)
+        Me.Controls.Add(Me.cmdGenerarFastReport)
+        Me.Name = "MainForm"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents cmdGenerar As Button
+    Friend WithEvents cmdGenerarFastReport As Button
+    Friend WithEvents cmdGenerarStimulsoft As Button
 End Class

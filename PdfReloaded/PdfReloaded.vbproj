@@ -11,11 +11,16 @@
 	<ItemGroup>
 		<PackageReference Include="FastReport.OpenSource" Version="2023.3.13" />
 		<PackageReference Include="FastReport.OpenSource.Export.PdfSimple" Version="2023.3.13" />
+		<PackageReference Include="Stimulsoft.Reports.Engine" Version="2026.1.4" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
 		<PackageReference Include="System.Drawing.Common" Version="4.7.3" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Update="reportes\reporteDePrueba.frx">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="reportes\reporteStimulsoft.mrt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
